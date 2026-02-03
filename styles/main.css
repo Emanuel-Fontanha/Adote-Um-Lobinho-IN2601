@@ -38,3 +38,15 @@ header {
         cursor: pointer;
     }
 }
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 15vh;
+}
+
+.faixa-gradiente{
+    width: 100vw;
+    height: 0.5vh;
+    background: linear-gradient(to right, #DEB959,#2C5680);
+}
