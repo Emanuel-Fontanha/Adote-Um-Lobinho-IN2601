@@ -1,0 +1,24 @@
+{
+  "name": "adote-um-lobinho-in2601",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+"start:api":"json-server --watch lobinhos.json --port 3000"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emanuel-Fontanha/Adote-Um-Lobinho-IN2601.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Emanuel-Fontanha/Adote-Um-Lobinho-IN2601/issues"
+  },
+  "homepage": "https://github.com/Emanuel-Fontanha/Adote-Um-Lobinho-IN2601#readme",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}
