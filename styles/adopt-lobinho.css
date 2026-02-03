@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=WindSong:wght@400;500&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+main{
+    display: flex;
+    justify-content: center;
+    font-family: Darker Grotesque;
+}
+
+figure{
+    background-color: rgb(5, 134, 247);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.adopt{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+.title{
+    display: flex;
+    gap: 80px;
+}
+.title h1{
+    font-family: Darker Grotesque;
+    font-weight: 600;
+    font-size: 60px;
+}
+.title div{
+    padding-top: 40px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    height: 188px;
+    justify-content: space-around;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    font-family: Darker Grotesque;
+    font-weight: 500;
+}
+
+.input{
+    height: 38px;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+label{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+button{
+    background: #2C5680;
+    border: 1px solid #333333;
+    width: 209px;
+    height: 60px;
+    top: 668px;
+    left: 592px;
+    border-width: 1px;
+    color:white;
+    font-size: 36px;
+    align-self: center;
+}
+button:hover{
+    background-color: #0c2b4b;
+}
+
+
+#name{
+    width:85%;
+}
+#age{
+    width:10%;
+}
