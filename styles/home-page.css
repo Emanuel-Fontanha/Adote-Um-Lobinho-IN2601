@@ -13,6 +13,14 @@ h3{
     font-weight: 700;
     font-size: 34px;
 }
+h4{
+    font-weight: 700;
+    font-size: 36px;
+}
+h5{
+    font-weight: 300;
+    font-size: 20px;
+}
 /*section BANNER com ÂNCORA ADOTE um LOBINHO*/
 .banner-box{
     display: flex;
@@ -130,5 +138,83 @@ h3{
     font-weight: 400;
     font-size: 26px;
     line-height: 25px;
+}
+/*section LOBOS exemplo*/
+.wolf-exemple-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.imgs-names-infos-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 71px;
+    padding: 73px 0 116px;
+}
+
+.img-name-infos-box-1{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 60px;
+}
+.img-name-infos-box-2{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: end;
+    gap: 60px;
+}
+.wolf-img-1,
+.wolf-img-2{ /*PARA TESTE, MUDAR DEPOIS com DOM e os objetos do JSON*/
+    background-color: red;
+    border: #333333 1px;
+    width: 430px;
+    height: 328px;
+    position: relative;
+    display: inline-block;
+}
+  
+.wolf-img-1::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: 7%;
+    width: 100%;
+    height: 100%;
+    background: #2C5680;
+    border: 4px solid #333333;
+    z-index: -1;
+}
+.wolf-img-2::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 6%;
+    width: 100%;
+    height: 100%;
+    background: #2C5680;
+    border: 4px solid #333333;
+    z-index: -1;
+}
+.wolf-img-1 img,
+.wolf-img-2 img{
+    display: block;
+    max-width: 100%;
+  }
+  
+.name-infos-box{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.img-name-infos-box-1 p,
+.img-name-infos-box-2 p{
+    max-width: 461px;
 }
 
