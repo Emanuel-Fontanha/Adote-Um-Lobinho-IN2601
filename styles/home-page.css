@@ -1,11 +1,19 @@
 body{
     font-family: 'Darker Grotesque';
+    height: 100vh;
+    margin: 0;
 }
 h2{
     font-weight: 700;
     font-size: 48px;
     color: #DEB959;
+    margin: 30px 0 15px;
 }
+h3{
+    font-weight: 700;
+    font-size: 34px;
+}
+/*section BANNER com ÂNCORA ADOTE um LOBINHO*/
 .banner-box{
     display: flex;
     flex-direction: column;
@@ -63,15 +71,15 @@ h2{
     line-height: 25px;
 }
 
+/*section ABOUT*/
 .about-box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100vw;
     min-height: 333px;
     background-color: #2C5680;
-    gap: 20px;
 }
 .about-box p{
     color: white;
@@ -80,5 +88,47 @@ h2{
     font-size: 24px;
     text-align: center;
     line-height: 30px;
-
 }
+/*section VALORES*/
+.values-title-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    width: 100vw;
+    min-height: 625px;
+}
+
+.values-box{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding-bottom: 87px;
+}
+.value-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: auto;
+    color: white;
+    gap: 26px;
+}
+.elipse-box{
+    width: 190px;
+    height: 190px;
+    background-color: white;
+    border-radius: 50%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.value-box p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 25px;
+}
+
