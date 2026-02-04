@@ -15,4 +15,36 @@ h2{
 p{
     font-family: 'Darker Grotesque';
 }
-
+.img-btns-info-box{
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+}
+.img-btns-box{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.wolf-img{ /*PARA TESTE, MUDAR DEPOIS com DOM e os objetos do JSON*/
+    background-color: red;
+    border: #333333 1px;
+    width: 430px;
+    height: 328px;
+    position: relative;
+    display: inline-block;
+}
+.wolf-img::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: 6%;
+    width: 100%;
+    height: 100%;
+    background: #2C5680;
+    border: 4px solid #333333;
+    z-index: -1;
+}
+.wolf-img img{
+    display: block;
+    max-width: 100%;
+  }
