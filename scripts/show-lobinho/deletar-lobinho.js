@@ -21,5 +21,10 @@ async function deletarLobinho(id) {
     }
 }
 
-//Exemplo de uso:
-deletarLobinho(1);
+let del_btn = document.querySelector("#del-btn");
+del_btn.addEventListener("click", deletarLobinho(`${id}`));
+
+
+
+
+
