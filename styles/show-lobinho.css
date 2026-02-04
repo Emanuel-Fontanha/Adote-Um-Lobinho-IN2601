@@ -10,20 +10,25 @@ h2{
     font-family: 'Roboto';
     font-weight: 900;
     font-size: 36px;
-    padding: 50px 0 50px;
+    padding: 50px 0 83px;
 }
 p{
     font-family: 'Darker Grotesque';
+    text-align: start;
+    max-width: 478px;
 }
 .img-btns-info-box{
     display: flex;
     flex-direction: row;
     gap: 52px;
 }
-.img-btns-box{
+.img-btn-box{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
+    padding-bottom: 112px;
 }
 .wolf-img{ /*PARA TESTE, MUDAR DEPOIS com DOM e os objetos do JSON*/
     background-color: red;
@@ -47,4 +52,32 @@ p{
 .wolf-img img{
     display: block;
     max-width: 100%;
-  }
+}
+
+.btns-box{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.btns-box button{
+    width: 180px;
+    height: 56px;
+    border: none;
+    color: white;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 18px;
+}
+.ad-btn{
+    background-color: #7AAC3A;
+}
+.del-btn{
+    background-color: #DE5959;
+}
+.ad-btn:hover,
+.del-btn:hover{
+    cursor: pointer;
+    filter: brightness(0.7);
+}
