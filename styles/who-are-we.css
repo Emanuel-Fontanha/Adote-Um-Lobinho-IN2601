@@ -1,0 +1,22 @@
+.main {
+    width: 100vw;
+    height: fit-content;
+    min-height: 50vh;
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.text-title {
+    font-size: 48px;
+    font-weight: 400;
+}
+.text {
+    width: 65vw;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 3px;
+}
