@@ -60,15 +60,19 @@ p{
     gap: 70px;
 }
 
-.btns-box button{
+.btns-box button,
+.btns-box a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 180px;
     height: 56px;
     border: none;
     color: white;
-    justify-content: center;
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 18px;
+    text-decoration: none;
 }
 .ad-btn{
     background-color: #7AAC3A;
