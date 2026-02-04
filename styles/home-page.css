@@ -1,0 +1,60 @@
+body{
+    font-family: 'Darker Grotesque';
+}
+
+.banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 500px;
+}
+
+.link-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    gap: 25px;
+}
+.link-hover-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.link-hover-box a{
+    color: white;
+    font-weight: 700;
+    font-size: 96px;
+    text-decoration: none;
+    transition: ease-in-out 0.4s;
+}
+.link-hover-box div{
+    width: 90px;
+    height: 5px;
+    background-color: transparent;
+    transition: ease-in-out 0.4s;
+}
+
+.link-hover-box a:hover{
+    cursor: pointer;
+    color: rgb(229, 229, 229);
+    font-size: 98px;
+}
+.link-hover-box:hover .hover-link{
+    background-color: white;
+}
+
+.text-adopt{
+    max-width: 630px;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    line-height: 25px;
+}
