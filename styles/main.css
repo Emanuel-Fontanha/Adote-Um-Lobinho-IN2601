@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=WindSong:wght@400;500&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 
 
 * {
@@ -38,3 +39,114 @@ header {
         cursor: pointer;
     }
 }
+
+/*estilização do footer*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+
+}
+
+.faixa-gradiente{
+    width: 100vw;
+    height: 0.5vh;
+    background: linear-gradient(to right, #DEB959,#2C5680);
+}
+
+.gray-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    height: 30vh;
+    gap: 188px;
+}
+.iframe-infos-btn-box{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.infos-btn-box{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.infos-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: auto;
+    height: 102px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400px;
+    font-family: 'Darker Grotesque';
+}
+iframe{
+    width: 250px;
+    height: 168px;
+}
+ .loc img{
+    width: 19px;
+    height: 19px;
+ }
+ .tel img{
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+ }
+ .email img{
+    width: 15px;
+    height: 15px;
+    margin-left: 4px;
+ }
+ .loc,
+ .email,
+ .tel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 346px;
+    line-height: 15px;
+    gap: 13px;
+ }
+ .infos-btn-box a{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 144px;
+    height: 30px;
+    background-color: #DEB959;
+    text-align: center;
+    color: #353535;
+    text-decoration: none;
+    font-family: 'Darker Grotesque';
+    font-weight: 700;
+    font-size: 25px;
+ }
+ .infos-btn-box a:hover{
+    cursor: pointer;
+    background-color: #ae9145;
+ }
+
+ .desenvolvidoCom-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Darker Grotesque';
+    font-weight: 400;
+    font-size: 18px;
+    gap: 8px;
+    padding: 43px 0 83px 0;
+ }
+ .desenvolvidoCom-box img{
+    width: 104px;
+    height: 104px;
+ }

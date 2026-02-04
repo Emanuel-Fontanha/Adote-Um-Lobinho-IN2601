@@ -1,0 +1,220 @@
+body{
+    font-family: 'Darker Grotesque';
+    height: 100vh;
+    margin: 0;
+}
+h2{
+    font-weight: 700;
+    font-size: 48px;
+    color: #DEB959;
+    margin: 30px 0 15px;
+}
+h3{
+    font-weight: 700;
+    font-size: 34px;
+}
+h4{
+    font-weight: 700;
+    font-size: 36px;
+}
+h5{
+    font-weight: 300;
+    font-size: 20px;
+}
+/*section BANNER com ÂNCORA ADOTE um LOBINHO*/
+.banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 500px;
+}
+
+.link-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    gap: 25px;
+}
+.link-hover-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.link-hover-box a{
+    color: white;
+    font-weight: 700;
+    font-size: 96px;
+    text-decoration: none;
+    transition: ease-in-out 0.4s;
+}
+.link-hover-box div{
+    width: 90px;
+    height: 5px;
+    background-color: transparent;
+    transition: ease-in-out 0.4s;
+}
+
+.link-hover-box a:hover{
+    cursor: pointer;
+    color: rgb(229, 229, 229);
+    font-size: 98px;
+}
+.link-hover-box:hover .hover-link{
+    background-color: white;
+}
+
+.text-adopt{
+    max-width: 630px;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    line-height: 25px;
+}
+
+/*section ABOUT*/
+.about-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    min-height: 333px;
+    background-color: #2C5680;
+}
+.about-box p{
+    color: white;
+    max-width: 960px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+}
+/*section VALORES*/
+.values-title-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    width: 100vw;
+    min-height: 625px;
+}
+
+.values-box{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding-bottom: 87px;
+}
+.value-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: auto;
+    color: white;
+    gap: 26px;
+}
+.elipse-box{
+    width: 190px;
+    height: 190px;
+    background-color: white;
+    border-radius: 50%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.value-box p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 25px;
+}
+/*section LOBOS exemplo*/
+.wolf-exemple-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.imgs-names-infos-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 71px;
+    padding: 73px 0 116px;
+}
+
+.img-name-infos-box-1{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 60px;
+}
+.img-name-infos-box-2{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: end;
+    gap: 60px;
+}
+.wolf-img-1,
+.wolf-img-2{ /*PARA TESTE, MUDAR DEPOIS com DOM e os objetos do JSON*/
+    background-color: red;
+    border: #333333 1px;
+    width: 430px;
+    height: 328px;
+    position: relative;
+    display: inline-block;
+}
+  
+.wolf-img-1::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: 7%;
+    width: 100%;
+    height: 100%;
+    background: #2C5680;
+    border: 4px solid #333333;
+    z-index: -1;
+}
+.wolf-img-2::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 6%;
+    width: 100%;
+    height: 100%;
+    background: #2C5680;
+    border: 4px solid #333333;
+    z-index: -1;
+}
+.wolf-img-1 img,
+.wolf-img-2 img{
+    display: block;
+    max-width: 100%;
+  }
+  
+.name-infos-box{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.img-name-infos-box-1 p,
+.img-name-infos-box-2 p{
+    max-width: 461px;
+}
+
