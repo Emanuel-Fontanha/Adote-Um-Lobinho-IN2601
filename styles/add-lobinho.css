@@ -10,6 +10,7 @@ main{
     background-color: rgb(167, 165, 165);
     padding: 40px 70px;
     margin-top: 50px;
+    margin-bottom: 50px;
     border: 4px solid black;
     background: #FFFFFF;
     display: flex;
