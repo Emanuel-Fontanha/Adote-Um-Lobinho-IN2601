@@ -1,8 +1,10 @@
 // Função assíncrona para buscar todos os lobinhos:
 
-async function buscarLobinhos() {
+export async function buscarLobinhos() {
     try {
-        const response = await fetch('http://localhost:3000/lobinhos');
+        const response = await fetch('http://localhost:3000/lobinhos', {
+            method: "GET"
+        });
 
         if (!response.ok) {
             throw new Error(`Erro HTTP! Status: ${response.status}`);
@@ -37,15 +39,11 @@ function atualizarHTML(lobo1, lobo2) {
     box1.querySelector("p").textContent = lobo1.descricao;
     box1.querySelector("img").src = lobo1.imagem;
 
-
-
-
     const box2 = document.querySelector(".img-name-infos-box-2");
     box2.querySelector("h4").textContent = lobo2.nome;
     box2.querySelector("h5").textContent = `Idade: ${lobo2.idade} anos`;
     box2.querySelector("p").textContent = lobo2.descricao;
     box2.querySelector("img").src = lobo2.imagem;
-
 }
 
 async function carregarDoisLobos() {

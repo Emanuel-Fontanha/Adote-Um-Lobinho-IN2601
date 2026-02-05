@@ -1,7 +1,6 @@
 //Exemplo de DELETE para a API (JSON Server)
 //DELETE remove um recurso completamente 
-
-const { method } = require("lodash");
+const { buscarLobinhos } = require("./home-page");
 
 async function deletarLobinho(id) {
     try {
@@ -23,6 +22,7 @@ async function deletarLobinho(id) {
 
 let del_btn = document.querySelector("#del-btn");
 del_btn.addEventListener("click", deletarLobinho(`${id}`));
+
 
 
 
