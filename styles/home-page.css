@@ -173,10 +173,13 @@ h5{
 .wolf-img-2{ /*PARA TESTE, MUDAR DEPOIS com DOM e os objetos do JSON*/
     background-color: red;
     border: #333333 1px;
-    width: 430px;
-    height: 328px;
+    width: auto;
+    height: auto;
     position: relative;
     display: inline-block;
+    background-size: contain;
+    background-size: cover;
+    background-position: center center;
 }
   
 .wolf-img-1::before {
