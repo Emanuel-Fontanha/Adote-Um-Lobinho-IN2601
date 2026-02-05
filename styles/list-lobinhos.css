@@ -53,48 +53,33 @@ main {
     }
 }
 
-#ad-btn{
+#ad-btn,
+#adopt-wolf-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130px;
-    height: 47px;
     background-color: #DEB959;
-    text-decoration: none;
     color: white;
     font-size: 36px;
     font-weight: 600;
-    padding-bottom: 7.83px;
+    text-decoration: none;
 
-    &:hover {
+    &:hover{
         background-color: #c09f4b;
         cursor: pointer;
     }
 }
-#adopt-wolf-btn {
-    outline: none;
-    border: none;
-    padding: 5px 20px;
-    background-color: #deb959;
-    color: #fff;
-    font-size: 24px;
-    transition: background-color 0.2s ease-in-out;
-    text-wrap: nowrap;
-    text-decoration: none;
-    font-weight: 600;
-    
-    &:hover {
-        background-color: #c09f4b;
-        cursor: pointer;
-    }
+
+#ad-btn {
+    width: 130px;
+    height: 47px;
+    padding-bottom: 7.83px;
 }
+
 #adopt-wolf-btn {
-    padding: 8px 40px;
-}
-#add-wolf a,
-#adopt-wolf-btn a {
-    text-decoration: none;
-    color: #fff;
+    width: 157px;
+    height: 45.92px;
+    padding-bottom: 11.92px;
 }
 
 .adopt-checkbox-container {
