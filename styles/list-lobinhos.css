@@ -54,7 +54,7 @@ main {
 }
 
 #ad-btn,
-#adopt-wolf-btn {
+.adopt-wolf-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,10 +76,16 @@ main {
     padding-bottom: 7.83px;
 }
 
-#adopt-wolf-btn {
+.adopt-wolf-btn {
     width: 157px;
     height: 45.92px;
     padding-bottom: 11.92px;
+}
+
+.adopted {
+    background-color: #7aac3a;
+    pointer-events: none;
+    cursor: none;
 }
 
 .adopt-checkbox-container {
@@ -116,13 +122,18 @@ main {
     padding: 40px 0px;
 }
 
-.wolf-container {
+.wolf-container-1,
+.wolf-container-2 {
     width: 60vw;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
     height: 350px;
+}
+
+.wolf-container-2 {
+    flex-direction: row-reverse;
 }
 
 .wolf-pic {
@@ -151,10 +162,15 @@ main {
     gap: 25px;
 }
 
-.wolf-details {
+.wolf-details-1,
+.wolf-details-2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.wolf-details-2 {
+    flex-direction: row-reverse;
 }
 
 .wolf-name-age-1,
