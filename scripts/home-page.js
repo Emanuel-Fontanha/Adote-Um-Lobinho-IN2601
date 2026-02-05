@@ -1,6 +1,6 @@
 // Função assíncrona para buscar todos os lobinhos:
 
-export async function buscarLobinhos() {
+async function buscarLobinhos() {
     try {
         const response = await fetch('http://localhost:3000/lobinhos', {
             method: "GET"

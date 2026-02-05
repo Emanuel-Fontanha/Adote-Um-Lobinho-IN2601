@@ -4,15 +4,15 @@ async function buscarLobo(id){
     
 }
 
-function carregarHtml(lobo1){
+function carregarHtml(lobo){
     const display = document.querySelector(".title-img-btns-info-box");
-    display.querySelector("h2").textContent = lobo1.nome;
-    display.querySelector("p").textContent = lobo1.descricao;
-    display.querySelector("img").src = lobo1.imagem;
+    display.querySelector("h2").textContent = lobo.nome;
+    display.querySelector("p").textContent = lobo.descricao;
+    display.querySelector("img").src = lobo.imagem;
 }
 
 async function carregarLobo(id){
-    
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
