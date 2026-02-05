@@ -1,7 +1,23 @@
 //para carregar a página com informações do lobinho
 
 async function buscarLobo(id){
-    
+    try {
+        const response = await fetch(`http://localhost:3000/lobinhos/${id}`, {
+            method: "GET"
+        });
+
+        if (!response.ok) {
+            throw new Error(`Erro HTTP! Status: ${response.status}`);
+        }
+
+        const lobo = await response.json();
+        console.log('Lobo encontrado:', lobo);
+
+        return lobinhos;
+    } catch (error) {
+        console.error('Erro ao buscar lobinhos:', error);
+        throw error;
+    }
 }
 
 function carregarHtml(lobo){
@@ -11,7 +27,7 @@ function carregarHtml(lobo){
     display.querySelector("img").src = lobo.imagem;
 }
 
-async function carregarLobo(id){
+async function carregarLobo(){
 
 }
 
