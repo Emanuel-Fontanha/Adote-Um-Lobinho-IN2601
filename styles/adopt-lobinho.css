@@ -52,6 +52,8 @@ form{
     height: 38px;
     border: none;
     border-bottom: 2px solid black;
+    padding: 1%;
+    font-size: 24px;
 }
 
 label{
