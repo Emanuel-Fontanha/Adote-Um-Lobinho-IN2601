@@ -1,0 +1,189 @@
+main {
+    min-height: 60vh;
+    height: fit-content;
+    font-family: 'Darker Grotesque';
+}
+
+.main-header-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 50vw;
+    width: 60vw;
+    padding: 30px 0px;
+}
+
+/* Filtros e botão de "ver lobinhos adotados" */
+
+.filter-add-wolf-div {
+    min-width: 50vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#wolf-filter {
+    outline: none;
+    width: 100%;
+    padding: 5px 15px 5px 52px;
+    font-size: 24px;
+    color: #333333;
+    background-image: url(../assets/list-lobinhos/lupa.png);
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 28px;
+    transition:
+        background-position 0.2s ease-in-out;
+
+    &:hover, &:focus {
+        border: #333333 2px solid;
+        border-radius: 3px;
+        background-position: -32px;
+        padding-left: 15px;
+    }
+}
+
+#add-wolf,
+#adopt-wolf-btn {
+    outline: none;
+    border: none;
+    padding: 5px 20px;
+    background-color: #deb959;
+    color: #fff;
+    font-size: 24px;
+    transition: background-color 0.2s ease-in-out;
+    text-wrap: nowrap;
+    
+    &:hover {
+        background-color: #c09f4b;
+        cursor: pointer;
+    }
+}
+#adopt-wolf-btn {
+    padding: 8px 40px;
+}
+#add-wolf a,
+#adopt-wolf-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.adopt-checkbox-container {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+}
+
+#adopt-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+}
+
+/* Listagem de lobinhos */
+
+.view-wolves-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    gap: 100px;
+    padding: 40px 0px;
+}
+
+.wolf-container {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 350px;
+}
+
+.wolf-pic {
+    height: 100%;
+    align-self: flex-end;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: 7%;
+        width: 100%;
+        height: 100%;
+        background: #2C5680;
+        border: 4px solid #333333;
+        z-index: -1;
+    }
+}
+
+.wolf-info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.wolf-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.wolf-name-age-1,
+.wolf-name-age-2 {
+    display: flex;
+    flex-direction: column;
+}
+.wolf-name-age-2 {
+    text-align: end;
+}
+
+.wolf-name {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.wolf-age {
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+.wolf-text-1,
+.wolf-text-2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+}
+.wolf-text-2 {
+    text-align: end;
+}
+
+/* Paginação */
+
+#pagination-btn {
+
+}
