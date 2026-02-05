@@ -35,14 +35,17 @@ function atualizarHTML(lobo1, lobo2) {
     box1.querySelector("h4").textContent = lobo1.nome;
     box1.querySelector("h5").textContent = `Idade: ${lobo1.idade} anos`;
     box1.querySelector("p").textContent = lobo1.descricao;
-    box1.querySelector(".wolf-img-1").style.backgroundImage = `url(${lobo1.imagem})`;
+    box1.querySelector("img").src = lobo1.imagem;
+
+
 
 
     const box2 = document.querySelector(".img-name-infos-box-2");
     box2.querySelector("h4").textContent = lobo2.nome;
     box2.querySelector("h5").textContent = `Idade: ${lobo2.idade} anos`;
     box2.querySelector("p").textContent = lobo2.descricao;
-    box2.querySelector(".wolf-img-2").style.backgroundImage = `url(${lobo2.imagem})`;
+    box2.querySelector("img").src = lobo2.imagem;
+
 }
 
 async function carregarDoisLobos() {

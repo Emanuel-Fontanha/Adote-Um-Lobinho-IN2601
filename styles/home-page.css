@@ -170,45 +170,40 @@ h5{
     gap: 60px;
 }
 .wolf-img-1,
-.wolf-img-2{ /*PARA TESTE, MUDAR DEPOIS com DOM e os objetos do JSON*/
-    background-color: red;
-    border: #333333 1px;
-    width: auto;
-    height: auto;
+.wolf-img-2{
     position: relative;
     display: inline-block;
-    background-size: contain;
-    background-size: cover;
-    background-position: center center;
+}
+.wolf-img-1 img,
+.wolf-img-2 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
 }
   
-.wolf-img-1::before {
-    content: "";
-    position: absolute;
-    top: -10%;
-    right: 7%;
-    width: 100%;
-    height: 100%;
-    background: #2C5680;
-    border: 4px solid #333333;
-    z-index: -1;
-}
+.wolf-img-1::before,
 .wolf-img-2::before {
     content: "";
     position: absolute;
-    top: -10%;
-    left: 6%;
     width: 100%;
     height: 100%;
     background: #2C5680;
-    border: 4px solid #333333;
-    z-index: -1;
+    border: 4px solid #333;
+    z-index: 1;
 }
-.wolf-img-1 img,
-.wolf-img-2 img{
-    display: block;
-    max-width: 100%;
-  }
+
+.wolf-img-1::before {
+    top: -10%;
+    right: 8%;
+}
+
+.wolf-img-2::before {
+    top: -10%;
+    left: 8%;
+}
+
   
 .name-infos-box{
     display: flex;
