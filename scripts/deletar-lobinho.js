@@ -1,6 +1,6 @@
 //Exemplo de DELETE para a API (JSON Server)
 //DELETE remove um recurso completamente 
-const { buscarLobinhos } = require("./home-page");
+import { id } from "./show-lobinho";
 
 async function deletarLobinho(id) {
     try {

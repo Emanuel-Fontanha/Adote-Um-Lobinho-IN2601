@@ -1,4 +1,9 @@
-//para carregar a página com informações do lobinho
+const params = new URLSearchParams(window.location.search);
+export const id = params.get("id");
+
+console.log(window.location);
+console.log(window.location.search);
+console.log(id);
 
 async function buscarLobo(id){
     try {
@@ -13,7 +18,7 @@ async function buscarLobo(id){
         const lobo = await response.json();
         console.log('Lobo encontrado:', lobo);
 
-        return lobinhos;
+        return lobo;
     } catch (error) {
         console.error('Erro ao buscar lobinhos:', error);
         throw error;
@@ -27,10 +32,19 @@ function carregarHtml(lobo){
     display.querySelector("img").src = lobo.imagem;
 }
 
-async function carregarLobo(){
+async function carregarLobo(id){
+    try {
+        const lobo = await buscarLobo(id);
 
+        carregarHtml(lobo);
+
+    } catch (error) {
+        console.error("Erro ao carregar lobo:", error);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    carregarLobo();
+    carregarLobo(id);
 });
+
+
