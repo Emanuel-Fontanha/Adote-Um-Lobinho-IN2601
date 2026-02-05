@@ -36,6 +36,11 @@ async function carregarLobo(id){
     try {
         const lobo = await buscarLobo(id);
 
+        if (!id) {
+            console.error("ID não informado na URL");
+            return;
+        }
+
         carregarHtml(lobo);
 
     } catch (error) {
