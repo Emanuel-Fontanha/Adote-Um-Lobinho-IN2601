@@ -15,6 +15,7 @@ figure{
 
 .adopt{
     margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     gap:40px;
@@ -53,6 +54,8 @@ form{
     height: 38px;
     border: none;
     border-bottom: 2px solid black;
+    padding: 1%;
+    font-size: 24px;
 }
 
 label{

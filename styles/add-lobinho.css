@@ -10,6 +10,7 @@ main{
     background-color: rgb(167, 165, 165);
     padding: 40px 70px;
     margin-top: 50px;
+    margin-bottom: 50px;
     border: 4px solid black;
     background: #FFFFFF;
     display: flex;
@@ -27,16 +28,16 @@ main{
 }
 
 .for-adoption button{
+    background: #2C5680;
+    border: 1px solid #333333;
     width: 209px;
     height: 60px;
-    background: #2C5680;
-    color: white;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    top: 668px;
+    left: 592px;
+    border-width: 1px;
+    color:white;
+    font-size: 36px;
     align-self: center;
-    transition: 0.2s ease-in-out;
 }
 
 .for-adoption button:hover{
