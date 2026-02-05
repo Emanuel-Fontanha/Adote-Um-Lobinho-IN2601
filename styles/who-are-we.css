@@ -2,7 +2,7 @@
     width: 100vw;
     height: fit-content;
     min-height: 50vh;
-    font-family: 'Inter';
+    font-family: 'Darker Grotesque';
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@
 .text {
     width: 65vw;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     letter-spacing: 3px;
 }
