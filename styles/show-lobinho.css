@@ -33,8 +33,8 @@ p{
 .wolf-img{ /*PARA TESTE, MUDAR DEPOIS com DOM e os objetos do JSON*/
     background-color: red;
     border: #333333 1px;
-    width: 430px;
-    height: 328px;
+    width: auto;
+    height: auto;
     position: relative;
     display: inline-block;
 }
