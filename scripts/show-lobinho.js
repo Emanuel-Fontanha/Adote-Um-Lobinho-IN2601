@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-export const id = params.get("id");
+const id = params.get("id");
 
 console.log(window.location);
 console.log(window.location.search);

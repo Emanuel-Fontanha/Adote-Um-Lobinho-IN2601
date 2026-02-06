@@ -32,7 +32,7 @@ function atualizarLayout(lobinhos) {
                         </div>
                         <a
                             class="adopt-wolf-btn ${lobinho.adotado ? "adopted" : ""}"
-                            href="../pages/show-lobinho.html"
+                            href="../pages/show-lobinho.html?id=${lobinho.id}"
                             >${lobinho.adotado ? "Adotado" : "Adotar"}</a>
                     </div>
     
