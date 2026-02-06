@@ -47,6 +47,8 @@ async function carregarLobo(id){
         console.error("Erro ao carregar lobo:", error);
     }
 }
+let link = document.querySelector(".ad-btn");
+link.innerHTML = `<a class="ad-btn" href="/pages/adopt-lobinho.html?id=${id}">ADOTAR</a>`;
 
 document.addEventListener("DOMContentLoaded", () => {
     carregarLobo(id);
