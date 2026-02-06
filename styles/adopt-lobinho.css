@@ -5,7 +5,9 @@ main{
 }
 
 figure{
-    background-color: rgb(5, 134, 247);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -33,8 +35,8 @@ figure{
 form{
     display: flex;
     flex-direction: column;
-    height: 188px;
-    justify-content: space-around;
+    gap: 35px;
+    justify-content: space-between;
 }
 .info{
     display: flex;
