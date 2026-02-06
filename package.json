@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-"start:api":"json-server --watch lobinhos.json --port 3000"
-},
+    "start:api": "json-server --watch lobinhos.json --port 3000"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Emanuel-Fontanha/Adote-Um-Lobinho-IN2601.git"
