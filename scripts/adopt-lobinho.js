@@ -62,7 +62,7 @@ async function adotarLobinho(id, nome, idade, email) {
         throw error;
     }
 }
-let id = 998;
+let id = Number(document.querySelector("#ID").innerText);
 
 carregarLobinho(id);
 
