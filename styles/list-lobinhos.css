@@ -177,19 +177,21 @@ main {
 .wolf-name-age-2 {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 .wolf-name-age-2 {
-    text-align: end;
+    align-items: flex-end;
 }
 
 .wolf-name {
-    font-weight: 700;
     font-size: 36px;
+    width: fit-content;
 }
 
 .wolf-age {
     opacity: 0.5;
     font-size: 20px;
+    width: fit-content;
 }
 
 .wolf-text-1,
