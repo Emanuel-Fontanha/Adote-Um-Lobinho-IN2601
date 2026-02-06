@@ -69,10 +69,12 @@ async function adotarLobinho(id, nome, idade, email) {
 carregarLobinho(id);
 
 let btn_enviar = document.querySelector("#send");
-btn_enviar.addEventListener("click", ()=>{
+btn_enviar.addEventListener("click", (e)=>{
+    e.preventDefault();
     let mensage = document.querySelectorAll(".input");
     if( mensage[0].value!='' && Number(mensage[1].value)!=0 && mensage[2].value!=''){
             adotarLobinho(id, mensage[0].value, Number(mensage[1].value), mensage[2].value);
+            window.history.go(-2);
         }
     }
 );
