@@ -1,3 +1,6 @@
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
 async function buscarLobinhoID(id) {
     try{
         const response = await fetch(`http://localhost:3000/lobinhos?id=${id}`);
@@ -22,7 +25,7 @@ async function carregarLobinho(id){
         let name=lobinho[0].nome;
 
         let foto = document.querySelector("#pic");
-        foto.innerHTML = `<figure style='background-image: url(${img})' style='background-position: center'></figure>`
+        foto.innerHTML = `<figure style='background-image: url(${img})'></figure>`
 
         let title = document.querySelector("h1");
         title.innerHTML = `<h1>Adote o(a) ${name}<h1>`
@@ -62,7 +65,6 @@ async function adotarLobinho(id, nome, idade, email) {
         throw error;
     }
 }
-let id = Number(document.querySelector("#ID").innerText);
 
 carregarLobinho(id);
 
