@@ -1,4 +1,3 @@
-import { buscarLobinhos } from "./api.js"
 import { buscarLobinhos_porNome } from "./api.js"
 
 async function carregarLobinhos(name="") {
@@ -56,7 +55,7 @@ function filtrarLobinhos (lobinhos, shouldFilter) {
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        let lobinhos = await buscarLobinhos();
+        let lobinhos = await buscarLobinhos_porNome("");
         atualizarLayout(lobinhos);
     } catch (err) {
         console.error("Erro ao carregar:", err);
