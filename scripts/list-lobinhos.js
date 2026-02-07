@@ -1,12 +1,7 @@
-import { buscarLobinhos_porNome } from "./api.js"
+import { buscarLobinhos } from "./api.js"
 
-async function carregarLobinhos(name="") {
-    try {
-        const lobinhos = await buscarLobinhos_porNome(name);
-        return lobinhos
-    } catch(error) {
-        console.error("Erro ao carregar lobinhos:", error)
-    }
+async function carregarLobinhos() {
+
 }
 
 function atualizarLayout(lobinhos) {
@@ -46,37 +41,22 @@ function atualizarLayout(lobinhos) {
     })
 }
 
-function filtrarLobinhos (lobinhos, shouldFilter) {
-    if (shouldFilter) {
-        lobinhos = lobinhos.filter(lobo => lobo.adotado == true)
-    }
-    atualizarLayout(lobinhos)
-}
-
 
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        let lobinhos = await buscarLobinhos_porNome("");
+        const lobinhos = await buscarLobinhos();
         atualizarLayout(lobinhos);
-    } catch (err) {
-        console.error("Erro ao carregar:", err);
+    } catch (error) {
+        console.error("Erro ao carregar:", error);
     }
 });
 
-let searchBar = document.querySelector("#wolf-filter");
+const searchBar = document.querySelector("#wolf-filter");
 document.addEventListener("keydown", async (e) => {
     if (e.key === "Enter") {
         let nameFilter = searchBar.value;
         const lobinhos = await carregarLobinhos(nameFilter);
         atualizarLayout(lobinhos);
     }
-})
-
-let shouldFilter = false
-const checkboxAdopted = document.querySelector("#adopt-checkbox")
-checkboxAdopted.addEventListener("change", async () => {
-    shouldFilter = (shouldFilter ? false : true)
-    const lobinhos = await carregarLobinhos()
-    filtrarLobinhos(lobinhos, shouldFilter)
 })
