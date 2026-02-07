@@ -1,8 +1,17 @@
-import { buscarLobinhos_porNome } from "./api.js"
+import { buscarLobinhos_porNome, buscarLobinhosAdotados } from "./api.js"
 
 async function carregarLobinhos(name="") {
-    try {
+     try {
         const lobinhos = await buscarLobinhos_porNome(name);
+        return lobinhos
+    } catch(error) {
+        console.error("Erro ao carregar lobinhos:", error)
+    }
+}
+
+async function carregarLobinhosAdotados(name="") {
+    try {
+        const lobinhos = await buscarLobinhosAdotados(name);
         return lobinhos
     } catch(error) {
         console.error("Erro ao carregar lobinhos:", error)
@@ -46,15 +55,6 @@ function atualizarLayout(lobinhos) {
     })
 }
 
-function filtrarLobinhos (lobinhos, shouldFilter) {
-    if (shouldFilter) {
-        lobinhos = lobinhos.filter(lobo => lobo.adotado == true)
-    }
-    atualizarLayout(lobinhos)
-}
-
-
-
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         let lobinhos = await buscarLobinhos_porNome("");
@@ -77,6 +77,15 @@ let shouldFilter = false
 const checkboxAdopted = document.querySelector("#adopt-checkbox")
 checkboxAdopted.addEventListener("change", async () => {
     shouldFilter = (shouldFilter ? false : true)
-    const lobinhos = await carregarLobinhos()
-    filtrarLobinhos(lobinhos, shouldFilter)
+    let nameFilter = searchBar.value;
+    if (shouldFilter) {
+        const lobinhos = await carregarLobinhosAdotados(nameFilter)
+        console.log("checkado")
+        atualizarLayout(lobinhos)
+    }
+    else{
+        const lobinhos = await carregarLobinhos(nameFilter)
+        console.log("des-checkado")
+        atualizarLayout(lobinhos)
+    }
 })
