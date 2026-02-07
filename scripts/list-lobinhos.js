@@ -53,6 +53,8 @@ function filtrarLobinhos (lobinhos, shouldFilter) {
     atualizarLayout(lobinhos)
 }
 
+
+
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         let lobinhos = await buscarLobinhos_porNome("");
@@ -68,12 +70,13 @@ document.addEventListener("keydown", async (e) => {
         let nameFilter = searchBar.value;
         const lobinhos = await carregarLobinhos(nameFilter);
         atualizarLayout(lobinhos);
-    }      
+    }
 })
 
+let shouldFilter = false
 const checkboxAdopted = document.querySelector("#adopt-checkbox")
 checkboxAdopted.addEventListener("change", async () => {
-    const shouldFilter = (shouldFilter ? false : true)
+    shouldFilter = (shouldFilter ? false : true)
     const lobinhos = await carregarLobinhos()
     filtrarLobinhos(lobinhos, shouldFilter)
 })
