@@ -1,8 +1,9 @@
 import { buscarLobinhos } from "./api.js"
+import { buscarLobinhos_porNome } from "./api.js"
 
-async function carregarLobinhos() {
+async function carregarLobinhos(name="") {
     try {
-        const lobinhos = await buscarLobinhos()
+        const lobinhos = await buscarLobinhos_porNome(name);
         return lobinhos
     } catch(error) {
         console.error("Erro ao carregar lobinhos:", error)
@@ -53,10 +54,22 @@ function filtrarLobinhos (lobinhos, shouldFilter) {
     atualizarLayout(lobinhos)
 }
 
-
 document.addEventListener("DOMContentLoaded", async () => {
-    const lobinhos = await carregarLobinhos()
-    atualizarLayout(lobinhos)
+    try {
+        let lobinhos = await buscarLobinhos();
+        atualizarLayout(lobinhos);
+    } catch (err) {
+        console.error("Erro ao carregar:", err);
+    }
+});
+
+let searchBar = document.querySelector("#wolf-filter");
+document.addEventListener("keydown", async (e) => {
+    if (e.key === "Enter") {
+        let nameFilter = searchBar.value;
+        const lobinhos = await carregarLobinhos(nameFilter);
+        atualizarLayout(lobinhos);
+    }      
 })
 
 const checkboxAdopted = document.querySelector("#adopt-checkbox")
