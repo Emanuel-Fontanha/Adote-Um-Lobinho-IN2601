@@ -10,12 +10,12 @@ function handleLobinhos ({ nome = "", pagina = 1, limite = 4, adotado = false } 
         if (adotado == false) {
             // Se o user não marcar a checkbox "ver lobinhos adotados", cai no caso comum: buscar todos os lobinhos
             const dados = buscarLobinhos({nome, pagina, limite})
-            console.logo(dados.lobinhos)
+            console.log(dados.dados)
             return dados
         } else {
             // Se não, cai no caso especial: buscar apenas lobinhos adotados
             const dados = buscarLobinhosAdotados({nome, pagina, limite, adotado : true})
-            console.logo(dados.lobinhos)
+            console.log(dados.dados)
             return dados
         }
 
@@ -36,7 +36,6 @@ async function buscarLobinhos({ nome = "", pagina = 1, limite = 4 } = {}) {
         }
 
         const lobinhos = await response.json()
-        console.log(lobinhos)
 
         // Linha usada para capturar o número de objetos em lobinhos.json
         const totalLobinhos = parseInt(response.headers.get('X-Total-Count'))
