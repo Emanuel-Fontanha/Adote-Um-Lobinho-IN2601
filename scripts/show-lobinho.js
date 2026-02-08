@@ -7,17 +7,13 @@ console.log(id);
 
 async function buscarLobo(id){
     try {
-        const response = await fetch(`http://localhost:3000/lobinhos/${id}`, {
-            method: "GET"
-        });
+        const response = await fetch(`http://localhost:3000/lobinhos/${id}`);
 
         if (!response.ok) {
             throw new Error(`Erro HTTP! Status: ${response.status}`);
         }
 
         const lobo = await response.json();
-        console.log('Lobo encontrado:', lobo);
-
         return lobo;
     } catch (error) {
         console.error('Erro ao buscar lobinhos:', error);

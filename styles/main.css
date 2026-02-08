@@ -7,6 +7,9 @@
     margin: 0px;
     padding: 0px;
 }
+
+/* HEADER */
+
 header {
     background-color: #85cdf5;
     display: flex;
@@ -25,7 +28,7 @@ header {
     font-size: 30px;
     font-family: 'Darker Grotesque';
     font-weight: 700;
-
+    
     &:hover {
         text-decoration: underline #333333 5px;
     }
@@ -33,35 +36,40 @@ header {
 .pic-logo {
     width: 80px;
     transition: transform 0.2s ease-in-out;
-
+    
     &:hover {
         transform: scale(1.1);
         cursor: pointer;
     }
 }
 
-/*estilização do footer*/
-.footer{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: auto;
+/* MAIN */
 
+main {
+    min-height: 50.5vh;
 }
 
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #333333;
+}
 .faixa-gradiente{
     width: 100%;
     height: 0.5vh;
     background: linear-gradient(to right, #DEB959,#2C5680);
 }
-
 .gray-box{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #333333;
     gap: 188px;
+    min-height: 34.5vh;
 }
 .iframe-infos-btn-box{
     display: flex;
@@ -71,50 +79,48 @@ header {
 .infos-btn-box{
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    justify-content: space-between;
 }
 .infos-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    width: auto;
+    gap: 25px;  
     height: 102px;
     color: white;
     font-size: 18px;
-    font-weight: 400px;
     font-family: 'Darker Grotesque';
 }
 iframe{
-    width: 250px;
-    height: 168px;
+    width: 260px;
+    height: 180px;
 }
- .loc img{
+.loc img{
     width: 19px;
     height: 19px;
- }
- .tel img{
+}
+.tel img{
     width: 14px;
     height: 14px;
     margin-left: 4px;
- }
- .email img{
+}
+.email img{
     width: 15px;
     height: 15px;
     margin-left: 4px;
- }
- .loc,
- .email,
- .tel{
+}
+.loc,
+.email,
+.tel{
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 346px;
     line-height: 15px;
     gap: 13px;
- }
- .infos-btn-box a{
+}
+.infos-btn-box a{
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -127,13 +133,12 @@ iframe{
     font-family: 'Darker Grotesque';
     font-weight: 700;
     font-size: 25px;
- }
- .infos-btn-box a:hover{
+}
+.infos-btn-box a:hover{
     cursor: pointer;
     background-color: #ae9145;
- }
-
- .desenvolvidoCom-box{
+}
+.desenvolvidoCom-box{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,8 +149,8 @@ iframe{
     font-size: 18px;
     gap: 8px;
     padding: 43px 0 83px 0;
- }
- .desenvolvidoCom-box img{
+}
+.desenvolvidoCom-box img{
     width: 104px;
     height: 104px;
- }
+}

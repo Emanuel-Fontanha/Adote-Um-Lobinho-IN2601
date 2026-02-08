@@ -155,7 +155,7 @@ h5{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 71px;
+    gap: 120px;
     padding: 73px 0 116px;
 }
 
@@ -178,8 +178,10 @@ h5{
 }
 .wolf-img-1 img,
 .wolf-img-2 img {
+    max-width: 400px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
     display: block;
-    max-width: 100%;
     height: auto;
     position: relative;
     z-index: 2;
@@ -206,7 +208,6 @@ h5{
     left: 8%;
 }
 
-  
 .name-infos-box{
     display: flex;
     flex-direction: column;
@@ -218,3 +219,7 @@ h5{
     max-width: 461px;
 }
 
+.name-infos-box p {
+    font-size: 24px;
+    font-weight: 400;
+}

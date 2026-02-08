@@ -1,21 +1,8 @@
+import { buscarLobinhoID } from "./api.js";
+
+
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
-
-async function buscarLobinhoID(id) {
-    try{
-        const response = await fetch(`http://localhost:3000/lobinhos?id=${id}`);
-
-        if(!response.ok){
-            throw new Error(`Erro HTTP! Status: ${response.status}`);
-        }
-
-        const lobinho = await response.json();
-        return lobinho
-    }catch(error){
-        console.error('Erro ao buscar lobinhos:', error);
-        throw error;
-    }
-}
 
 async function carregarLobinho(id){
     try{
@@ -40,10 +27,10 @@ async function carregarLobinho(id){
 
 async function adotarLobinho(id, nome, idade, email) {
     const lobinhoMudança = {
-      "adotado": true,
-      "nomeDono": nome,
-      "idadeDono": idade,
-      "emailDono": email
+        "adotado": true,
+        "nomeDono": nome,
+        "idadeDono": idade,
+        "emailDono": email
     };
 
     try{
@@ -71,9 +58,9 @@ carregarLobinho(id);
 let btn_enviar = document.querySelector("#send");
 btn_enviar.addEventListener("click", (e)=>{
     e.preventDefault();
-    let mensage = document.querySelectorAll(".input");
-    if( mensage[0].value!='' && Number(mensage[1].value)!=0 && mensage[2].value!=''){
-            adotarLobinho(id, mensage[0].value, Number(mensage[1].value), mensage[2].value);
+    let mensagem = document.querySelectorAll(".input");
+    if( mensagem[0].value!='' && Number(mensagem[1].value)!=0 && mensagem[2].value!=''){
+            adotarLobinho(id, mensagem[0].value, Number(mensagem[1].value), mensagem[2].value);
             window.history.go(-2);
         }
     }

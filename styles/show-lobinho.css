@@ -8,7 +8,7 @@ h2{
     font-family: 'Roboto';
     font-weight: 900;
     font-size: 36px;
-    padding: 50px 0 83px;
+    padding: 50px 0px 83px;
 }
 p{
     font-family: 'Darker Grotesque';
@@ -48,8 +48,10 @@ p{
     z-index: -1;
 }
 .wolf-img img{
+    max-width: 450px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
     display: block;
-    max-width: 100%;
 }
 
 .btns-box{
@@ -77,6 +79,10 @@ p{
 }
 .del-btn{
     background-color: #DE5959;
+}
+.info-box {
+    font-size: 24px;
+    height: fit-content;
 }
 .ad-btn:hover,
 .del-btn:hover{

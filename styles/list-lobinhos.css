@@ -5,7 +5,7 @@ main {
 }
 
 .main-header-container {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,8 +16,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    place-self: center;
     gap: 25px;
-    min-width: 50vw;
+    min-width: 63vw;
     width: 60vw;
     padding: 30px 0px;
 }
@@ -64,23 +65,26 @@ main {
     font-size: 36px;
     font-weight: 600;
     text-decoration: none;
-
+    
     &:hover{
         background-color: #c09f4b;
         cursor: pointer;
     }
 }
 
+.adopt-wolf-btn {
+    margin-top: 20px;
+}
 #ad-btn {
-    width: 130px;
+    width: 150px;
     height: 47px;
-    padding-bottom: 7.83px;
+    padding-bottom: 8px;
 }
 
 .adopt-wolf-btn {
     width: 157px;
-    height: 45.92px;
-    padding-bottom: 11.92px;
+    height: 45px;
+    padding-bottom: 11px;
 }
 
 .adopted {
@@ -118,14 +122,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     gap: 100px;
     padding: 40px 0px;
 }
 
 .wolf-container-1,
 .wolf-container-2 {
-    width: 60vw;
+    width: 85vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,13 +145,14 @@ main {
 .wolf-pic-2 {
     position: relative;
     display: inline-block;
-    height: 100%;
     z-index: 0;
 }
 
 .wolf-pic-1 img,
 .wolf-pic-2 img {
-    height: 100%;
+    max-width: 450px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
     display: block;
     position: relative;
     z-index: 1;
@@ -162,21 +167,22 @@ main {
     height: 100%;
     background: #2C5680;
     border: 4px solid #333333;
-    z-index: -1;
+    z-index: 1;
 }
 
 .wolf-pic-1::before {
-    left: -7%;
+    left: -8%;
 }
 
 .wolf-pic-2::before {
-    right: -7%;
+    right: -8%;
 
 }.wolf-info {
-    width: 60%;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: space-evenly;
+    height: 100%;
 }
 
 .wolf-details-1,
@@ -201,12 +207,12 @@ main {
 }
 
 .wolf-name {
-    font-size: 36px;
+    font-size: 45px;
     width: fit-content;
 }
 
 .wolf-age {
-    opacity: 0.5;
+    opacity: 0.6;
     font-size: 20px;
     width: fit-content;
 }
@@ -214,7 +220,7 @@ main {
 .wolf-text-1,
 .wolf-text-2 {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 20px;
 }
 .wolf-text-2 {
@@ -231,7 +237,7 @@ main {
     place-self: center;
     width: fit-content;
     min-width: 20%;
-    margin: 40px 0px;
+    margin: 0px 0px 20px;
 }
 
 .page-btn {

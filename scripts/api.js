@@ -24,7 +24,6 @@ export async function handleLobinhos ({ nome = "", pagina = 1, limite = 4, adota
 }
 
 
-
 // Função para requisitar todos os lobinhos
 async function buscarLobinhos({ nome = "", pagina = 1, limite = 4 } = {}) {
     try {
@@ -52,7 +51,6 @@ async function buscarLobinhos({ nome = "", pagina = 1, limite = 4 } = {}) {
 }
 
 
-
 // Função para requisitar lobinhos adotados
 async function buscarLobinhosAdotados({ nome = "", pagina = 1, limite = 4 } = {}) {
     try {
@@ -75,5 +73,23 @@ async function buscarLobinhosAdotados({ nome = "", pagina = 1, limite = 4 } = {}
     } catch (error) {
         console.error(`Erro ao buscar lobinhos: ${error}`)
         throw error
+    }
+}
+
+
+// Função para requisitar um único lobinho por ID
+export async function buscarLobinhoID(id) {
+    try{
+        const response = await fetch(`http://localhost:3000/lobinhos?id=${id}`);
+
+        if(!response.ok){
+            throw new Error(`Erro HTTP! Status: ${response.status}`);
+        }
+
+        const lobinho = await response.json();
+        return lobinho
+    }catch(error){
+        console.error('Erro ao buscar lobinhos:', error);
+        throw error;
     }
 }
