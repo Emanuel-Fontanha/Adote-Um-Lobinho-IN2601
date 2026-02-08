@@ -43,8 +43,6 @@ async function buscarLobinhos({ nome = "", pagina = 1, limite = 4 } = {}) {
         return {
             lobos: lobinhos,
             pagina,
-            limite,
-            totalItens: totalLobinhos,
             totalPaginas: totalPages
         }
     } catch (error) {
@@ -72,8 +70,6 @@ async function buscarLobinhosAdotados({ nome = "", pagina = 1, limite = 4 } = {}
         return {
             lobos: lobinhos,
             pagina,
-            limite,
-            totalItens: totalLobinhos,
             totalPaginas: totalPages
         }
     } catch (error) {
