@@ -206,6 +206,35 @@ main {
 
 /* Paginação */
 
-#pagination-btn {
+.pagination-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    place-self: center;
+    width: fit-content;
+    min-width: 20%;
+}
 
+.page-btn {
+    border: none;
+    padding: 3px 0px;
+    background-color: inherit;
+    font-size: 18px;
+    height: fit-content;
+    width: 40px;
+    text-align: center;
+    height: fit-content;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.inactive:hover {
+    cursor: default;
+}
+
+.current-page {
+    background-color: #deb959;
 }
