@@ -2,5 +2,5 @@
 
 # Página List-lobinhos:
 - terminar menu de paginação (<< 1 2 3 4... >>)
-- acertar o detalhe azul (before) das fotos dos lobos
-- fazer função filtro de lobos adotados (checkbox)
+
+-verificar se tudo está funcionado após paginação: filtro de lobos adotados e barra de busca por nome
