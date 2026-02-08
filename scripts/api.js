@@ -1,5 +1,5 @@
-// Função para LIDAR COM OS FILTROS da requisição GET
-function handleLobinhos ({ nome = "", pagina = 1, limite = 4, adotado = false } = {}) {
+// Função principal para LIDAR COM OS FILTROS da requisição GET
+export async function handleLobinhos ({ nome = "", pagina = 1, limite = 4, adotado = false } = {}) {
     try {
 
         // Essa função lida com os 2 tipos de filtro apresentados
@@ -9,13 +9,11 @@ function handleLobinhos ({ nome = "", pagina = 1, limite = 4, adotado = false } 
 
         if (adotado == false) {
             // Se o user não marcar a checkbox "ver lobinhos adotados", cai no caso comum: buscar todos os lobinhos
-            const dados = buscarLobinhos({nome, pagina, limite})
-            console.log(dados.dados)
+            const dados = await buscarLobinhos({nome, pagina, limite})
             return dados
         } else {
             // Se não, cai no caso especial: buscar apenas lobinhos adotados
-            const dados = buscarLobinhosAdotados({nome, pagina, limite, adotado : true})
-            console.log(dados.dados)
+            const dados = await buscarLobinhosAdotados({nome, pagina, limite})
             return dados
         }
 
@@ -25,8 +23,9 @@ function handleLobinhos ({ nome = "", pagina = 1, limite = 4, adotado = false } 
     }
 }
 
-handleLobinhos()
 
+
+// Função para requisitar todos os lobinhos
 async function buscarLobinhos({ nome = "", pagina = 1, limite = 4 } = {}) {
     try {
         // A requisição não precisa do query param "adotado"
@@ -42,7 +41,7 @@ async function buscarLobinhos({ nome = "", pagina = 1, limite = 4 } = {}) {
         const totalPages = Math.ceil(totalLobinhos / limite)
 
         return {
-            dados: lobinhos,
+            lobos: lobinhos,
             pagina,
             limite,
             totalItens: totalLobinhos,
@@ -55,6 +54,8 @@ async function buscarLobinhos({ nome = "", pagina = 1, limite = 4 } = {}) {
 }
 
 
+
+// Função para requisitar lobinhos adotados
 async function buscarLobinhosAdotados({ nome = "", pagina = 1, limite = 4 } = {}) {
     try {
         const response = await fetch(`http://localhost:3000/lobinhos?nome_like=${nome}&_page=${pagina}&_limit=${limite}&adotado=true`)
@@ -63,11 +64,18 @@ async function buscarLobinhosAdotados({ nome = "", pagina = 1, limite = 4 } = {}
         }
 
         const lobinhos = await response.json()
-        console.log(lobinhos)
 
         // Linha usada para capturar o número de objetos em lobinhos.json
-        const totalLobinhos = response.headers.get('X-Total-Count')
-        return lobinhos
+        const totalLobinhos = parseInt(response.headers.get('X-Total-Count'))
+        const totalPages = Math.ceil(totalLobinhos / limite)
+
+        return {
+            lobos: lobinhos,
+            pagina,
+            limite,
+            totalItens: totalLobinhos,
+            totalPaginas: totalPages
+        }
     } catch (error) {
         console.error(`Erro ao buscar lobinhos: ${error}`)
         throw error
