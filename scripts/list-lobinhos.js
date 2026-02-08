@@ -19,10 +19,10 @@ function atualizarLayout(lobinhos) {
         div.innerHTML = `
             <div class="wolf-container${index % 2 == 0 ? "-1" : "-2"}">
     
-                <img
-                    src="${lobinho.imagem}"
-                    alt="${lobinho.nome}"
-                    class="wolf-pic">
+                <div class="wolf-pic${index % 2 == 0 ? "-1" : "-2"}">
+                    <img src="${lobinho.imagem}" alt="${lobinho.nome}">
+                </div>
+
                 <div class="wolf-info">
     
                     <div class="wolf-details${index % 2 == 0 ? "-1" : "-2"}">
