@@ -215,6 +215,7 @@ main {
     place-self: center;
     width: fit-content;
     min-width: 20%;
+    margin: 40px 0px;
 }
 
 .page-btn {
